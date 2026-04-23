@@ -587,7 +587,7 @@ MolecularPath::minRadius()
 {
     // internal parameters:
     real maxSampleDist = 0.1;
-    boost::uintmax_t maxIter = 100;
+    std::uintmax_t maxIter = 100;
 
     // draw radius samples along path:
     int nSamples = std::ceil(length_/maxSampleDist);
