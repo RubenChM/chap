@@ -6,8 +6,8 @@
 
 CHAP is a tool for the functional annotation of ion channel structures written in C++. See the website under [www.channotation.org][CHANNOTATION] for a full documentation including installation instructions and usage examples. If you have any questions please use the GitHub [Issue Tracker](https://github.com/channotation/chap/issues).
 
-
-## Prerequisites ##
+## Building from source ##
+### Prerequisites ###
 
 Prior to installing CHAP, make sure that you have the following libraries and tools installed:
 
@@ -25,7 +25,7 @@ You also need `-DGMX_INSTALL_LEGACY_API=ON` to get the required headers for CHAP
 CHAP also depends on [RapidJSON](http://rapidjson.org/), but this is included as a header-only library, and on [GTest][GTest], but this is downloaded and installed automatically by CMake, so you don't need to do anything about either of these (you will however need Internet access when installing CHAP).
 
 
-## Installation ##
+### Installation ###
 
 For a minimal install of CHAP create a `build` directory parallel to the source tree and from there run `cmake`, `make`, `make check`, and `make install`.
 
@@ -58,7 +58,16 @@ which should bring up an online help for using CHAP.
 [GTest]: https://github.com/google/googletest
 [CHANNOTATION]: http://www.channotation.org
 
+## Building with Conda ##
 
-## New ##
+If you have conda installed, you can create a conda environment with all dependencies and install chap using the following commands:
+
+```bash
+conda env create -f conda/env.yml
+conda activate chap-env
+bash conda/build.sh
+```
+
+## Running with Singularity ##
 
 If you have ubuntu and you want to run a precompiled chap version with a singularity image, follow these instructions [here](https://github.com/channotation/chap/blob/singularity_branch/docs/_docs/getting-started/index.md)
