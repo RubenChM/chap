@@ -23,7 +23,7 @@
 
 
 # minimum version of cmake required for building:
-cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 # set project parameters:
 project(CHAP LANGUAGES CXX C VERSION 0.9.1)
@@ -98,7 +98,8 @@ include(ExternalProject)
 # Google test as external project:
 ExternalProject_Add(
     googletest
-    URL https://github.com/google/googletest/archive/release-1.7.0.zip
+  URL https://github.com/google/googletest/archive/refs/tags/release-1.12.1.zip
+  DOWNLOAD_EXTRACT_TIMESTAMP TRUE
     # Disable install step
     INSTALL_COMMAND ""
 )
@@ -107,8 +108,8 @@ ExternalProject_Add(
 ExternalProject_Get_Property(googletest source_dir binary_dir)
 
 # set include and library path variables:
-set(GTEST_INCLUDE_DIR ${source_dir}/include)
-set(GTEST_LIBRARY_PATH ${binary_dir}/${CMAKE_FIND_LIBRARY_PREFIXES}gtest.a)
+set(GTEST_INCLUDE_DIR ${source_dir}/googletest/include)
+set(GTEST_LIBRARY_PATH ${binary_dir}/lib/${CMAKE_FIND_LIBRARY_PREFIXES}gtest.a)
 set(GTEST_LIBRARY gtest)
 include_directories(${GTEST_INCLUDE_DIR})
 

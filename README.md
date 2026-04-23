@@ -11,7 +11,7 @@ CHAP is a tool for the functional annotation of ion channel structures written i
 
 Prior to installing CHAP, make sure that you have the following libraries and tools installed:
 
-1. The [CMake][CMake] tool in version 3.2 or higher. This will typically be available through your system's package manager. For example, on Ubuntu you can install CMake by typing `sudo apt-get install cmake`. CMake is used to check the availability of libraries and compilers on your system and will ensure that CHAP is installed properly.
+1. The [CMake][CMake] tool in version 3.5 or higher. This will typically be available through your system's package manager. For example, on Ubuntu you can install CMake by typing `sudo apt-get install cmake`. CMake is used to check the availability of libraries and compilers on your system and will ensure that CHAP is installed properly.
 2. A C++ compiler that supports the `C++11` standard. A popular choice is the [GNU Compiler Collection][GCC], which on Ubuntu can be obtained by typing `sudo apt-get install gcc`.
 3. The [Boost][Boost] C++ libraries, which on Ubuntu can be installed using `sudo apt-get install libboost-all-dev`. Boost algorithms are used in CHAP to solve some root finding and optimisation problems.
 4. The CBLAS and LAPACKE linear algebra libraries. On Ubuntu, the easiest way to obtain these is by typing `sudo apt-get install libblas-dev libatlas-base-dev libopenblas-dev liblapacke-dev`. The linear algebra libraries are used in CHAP's spline interpolation.
