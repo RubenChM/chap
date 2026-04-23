@@ -24,6 +24,7 @@
 
 #include <iostream>
 #include <functional>
+#include <cstdint>
 
 #include <boost/math/tools/minima.hpp>
 

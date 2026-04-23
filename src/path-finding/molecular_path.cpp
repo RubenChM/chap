@@ -27,7 +27,7 @@
 #include <functional>
 #include <limits>
 #include <ctime>
-
+#include <cstdint>
 #include <boost/math/tools/minima.hpp>
 
 #include <gromacs/pbcutil/pbc.h>
